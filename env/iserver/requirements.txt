@@ -1,0 +1,7 @@
+Flask
+google-cloud-storage
+marshmallow
+Pillow
+redis
+pyyaml
+Flask-SQLAlchemy

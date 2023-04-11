@@ -1,0 +1,2 @@
+docker build -f $BASE_CODE_PATH/fp/env/iserver/DockerfileBase -t ahanu/fp/iserver:base $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/iserver/DockerfileDev -t ahanu/fp/iserver:dev $BASE_CODE_PATH/fp

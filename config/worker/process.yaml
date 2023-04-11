@@ -1,0 +1,5 @@
+task:
+    name: 'process'
+    live: True
+    sleep: 1
+    device: 'cuda'

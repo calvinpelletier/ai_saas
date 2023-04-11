@@ -1,0 +1,12 @@
+storage:
+    bucket: 'fp-dev-bucket'
+db:
+    host: '127.0.0.1'
+    port: 5001
+compute:
+    host: '127.0.0.1'
+    port: 5002
+broker:
+    host: '34.83.6.30'
+    port: 6379
+    db: 0

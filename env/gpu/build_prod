@@ -1,0 +1,5 @@
+docker build -f $BASE_CODE_PATH/fp/env/gpu/DockerfileBase -t ahanu/fp/gpu:base $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/gpu/DockerfileDev -t ahanu/fp/gpu:dev $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/gpu/DockerfileProd -t ahanu/fp/gpu:prod $BASE_CODE_PATH/fp
+docker tag ahanu/fp/gpu:prod us-west1-docker.pkg.dev/hallowed-byte-293317/fp/gpu:prod
+docker push us-west1-docker.pkg.dev/hallowed-byte-293317/fp/gpu:prod

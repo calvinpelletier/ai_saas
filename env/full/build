@@ -1,0 +1,1 @@
+docker build -f $BASE_CODE_PATH/fp/env/full/Dockerfile -t ahanu/fp/full:latest $BASE_CODE_PATH/fp

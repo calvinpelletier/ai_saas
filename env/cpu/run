@@ -1,0 +1,5 @@
+docker run --net=host -it --shm-size=32g \
+    -v $BASE_CODE_PATH/fp:/home/fpu/code/fp \
+    -v $BASE_DATA_PATH/fp:/home/fpu/data/fp \
+    -w /home/fpu/code/fp \
+    ahanu/fp/cpu:dev bash

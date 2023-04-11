@@ -1,0 +1,12 @@
+server:
+    port: 5002
+job:
+    upload:
+        first_task: 'detect'
+    preprocess:
+        first_task: 'align'
+    postprocess:
+        first_task: 'inpaint'
+live:
+    process:
+        sleep: 0.25

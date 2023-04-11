@@ -1,0 +1,15 @@
+FROM ahanu/fp/iserver:base
+
+ADD . /home/fpu/code/fp
+RUN chown -R fpu:fpg /home/fpu/code/fp
+
+USER fpu
+WORKDIR /home/fpu
+
+ENV BASE_CODE_PATH=/home/fpu/code
+ENV BASE_DATA_PATH=/home/fpu/data
+ENV PYTHONPATH=${BASE_CODE_PATH}:${PYTHONPATH}
+ENV GOOGLE_APPLICATION_CREDENTIALS=${BASE_CODE_PATH}/fp/nocommit/google_app_creds.json
+
+EXPOSE 5001
+EXPOSE 5002

@@ -1,0 +1,5 @@
+task:
+    name: 'detect'
+    job: 'upload'
+    next: null
+    sleep: 1

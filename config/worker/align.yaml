@@ -1,0 +1,5 @@
+task:
+    name: 'align'
+    job: 'preprocess'
+    next: 'encode'
+    sleep: 1

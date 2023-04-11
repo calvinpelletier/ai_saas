@@ -1,0 +1,6 @@
+#!/bin/bash
+python3 $BASE_CODE_PATH/fp/scripts/setup_apache $1 $2
+a2ensite ai_saas.conf
+#/usr/sbin/apache2ctl -D FOREGROUND
+service apache2 start
+service apache2 reload

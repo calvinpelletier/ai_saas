@@ -1,0 +1,5 @@
+docker build -f $BASE_CODE_PATH/fp/env/cpu/DockerfileBase -t ahanu/fp/cpu:base $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/cpu/DockerfileDev -t ahanu/fp/cpu:dev $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/cpu/DockerfileProd -t ahanu/fp/cpu:prod $BASE_CODE_PATH/fp
+docker tag ahanu/fp/cpu:prod us-west1-docker.pkg.dev/hallowed-byte-293317/fp/cpu:prod
+docker push us-west1-docker.pkg.dev/hallowed-byte-293317/fp/cpu:prod

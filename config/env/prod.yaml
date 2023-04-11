@@ -1,0 +1,12 @@
+storage:
+    bucket: 'fp-prod-bucket'
+db:
+    host: 'TODO'
+    port: 5001
+compute:
+    host: 'TODO'
+    port: 5002
+broker:
+    host: 'TODO'
+    port: 6379
+    db: 0

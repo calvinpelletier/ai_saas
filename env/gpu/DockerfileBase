@@ -1,0 +1,11 @@
+FROM nvcr.io/nvidia/pytorch:22.02-py3
+
+RUN apt-get update
+
+RUN useradd -m fpu
+RUN groupadd fpg
+RUN usermod -a -G fpg fpu
+RUN echo 'alias python=python3' >> /home/fpu/.bashrc
+
+ADD ./env/gpu/requirements.txt /home/fpu/requirements.txt
+RUN pip install -r /home/fpu/requirements.txt

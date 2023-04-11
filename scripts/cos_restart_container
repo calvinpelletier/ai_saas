@@ -1,0 +1,2 @@
+# kill docker container then
+sudo systemctl start konlet-startup

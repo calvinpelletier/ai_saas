@@ -1,0 +1,9 @@
+FROM ahanu/fp/cpu:base
+
+USER fpu
+WORKDIR /home/fpu
+
+ENV BASE_CODE_PATH=/home/fpu/code
+ENV BASE_DATA_PATH=/home/fpu/data
+ENV PYTHONPATH=${BASE_CODE_PATH}:${PYTHONPATH}
+ENV GOOGLE_APPLICATION_CREDENTIALS=${BASE_CODE_PATH}/fp/nocommit/google_app_creds.json

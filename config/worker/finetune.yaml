@@ -1,0 +1,6 @@
+task:
+    name: 'finetune'
+    job: 'preprocess'
+    next: null
+    sleep: 1
+    device: 'cuda'

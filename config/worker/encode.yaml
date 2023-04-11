@@ -1,0 +1,6 @@
+task:
+    name: 'encode'
+    job: 'preprocess'
+    next: 'finetune'
+    sleep: 1
+    device: 'cuda'

@@ -1,0 +1,6 @@
+task:
+    name: 'inpaint'
+    job: 'postprocess'
+    next: 'unalign'
+    sleep: 1
+    device: 'cuda'

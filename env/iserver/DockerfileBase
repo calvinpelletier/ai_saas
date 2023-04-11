@@ -1,0 +1,29 @@
+FROM ubuntu/apache2:latest
+
+RUN apt-get update
+
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y \
+software-properties-common lsb-release build-essential libssl-dev cmake
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y sudo python3-pip \
+python3-opencv
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y net-tools apache2 \
+libapache2-mod-wsgi-py3
+
+RUN apt-get clean all
+RUN apt-get update
+
+RUN cp /etc/apache2/ports.conf /etc/apache2/ports.conf.backup
+RUN a2dissite 000-default.conf
+
+RUN useradd -m fpu
+RUN groupadd fpg
+RUN usermod -a -G fpg fpu
+RUN chown -R fpu:fpg /etc/apache2
+RUN chown -R fpu:fpg /var/lib/apache2
+RUN chown -R fpu:fpg /var/log/apache2
+RUN chown -R fpu:fpg /var/run/apache2
+RUN chown -R fpu:fpg /var/www
+RUN echo 'alias python=python3' >> /home/fpu/.bashrc
+
+ADD ./env/iserver/requirements.txt /home/fpu/requirements.txt
+RUN pip install -r /home/fpu/requirements.txt

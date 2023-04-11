@@ -1,0 +1,2 @@
+docker build -f $BASE_CODE_PATH/fp/env/gpu/DockerfileBase -t ahanu/fp/gpu:base $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/gpu/DockerfileDev -t ahanu/fp/gpu:dev $BASE_CODE_PATH/fp

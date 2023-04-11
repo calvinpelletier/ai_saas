@@ -1,0 +1,5 @@
+docker build -f $BASE_CODE_PATH/fp/env/iserver/DockerfileBase -t ahanu/fp/iserver:base $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/iserver/DockerfileDev -t ahanu/fp/iserver:dev $BASE_CODE_PATH/fp
+docker build -f $BASE_CODE_PATH/fp/env/iserver/DockerfileProd -t ahanu/fp/iserver:prod $BASE_CODE_PATH/fp
+docker tag ahanu/fp/iserver:prod us-west1-docker.pkg.dev/hallowed-byte-293317/fp/iserver:prod
+docker push us-west1-docker.pkg.dev/hallowed-byte-293317/fp/iserver:prod

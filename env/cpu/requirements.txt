@@ -1,0 +1,6 @@
+google-cloud-storage
+Pillow
+dlib
+scipy
+redis
+pyyaml

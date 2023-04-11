@@ -1,0 +1,7 @@
+google-cloud-storage
+Pillow
+scipy
+redis
+torch
+pyyaml
+lpips
